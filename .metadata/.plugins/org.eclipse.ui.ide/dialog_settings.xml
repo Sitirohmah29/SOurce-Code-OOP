@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\222310054"/>
+			<item value="C:\Project-UAS-222310054"/>
+			<item value="C:\Project_UAS"/>
+			<item value="C:\PBO-222310054-Pembelajaran-10"/>
+			<item value="C:\PBO-222310054-Pembelajaran-9"/>
+			<item value="C:\Maven-222310054-Pembelajaran-10"/>
+			<item value="C:\PBO-222310054-Pembelajaran-8"/>
+			<item value="C:\JDBC"/>
+			<item value="C:\PBO-222310054-pembelajaran-7"/>
+			<item value="C:\PBO-222310054-Pembelajaran-7"/>
+			<item value="C:\PBO-222310054-MAVEN\PBO-222310054-MAVEN"/>
+			<item value="C:\PBO-222310054-MAVEN"/>
+			<item value="C:\PBO-222310054-MAVEN\AppBukuTelp"/>
+			<item value="C:\PBO-222310031-MAVEN"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="611"/>
+		<item key="DIALOG_Y_ORIGIN" value="269"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+</section>

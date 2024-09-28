@@ -1,0 +1,214 @@
+package com.ibik.pbo.Pembelajaran;
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
+import javax.swing.JRadioButton;
+import javax.swing.JComboBox;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
+import java.awt.Panel;
+
+
+public class RegisterGUI extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textFullName;
+	private JTextField textEmail;
+	private final JButton btnNewButton = new JButton("Register");
+	private JTextField textPhone;
+	private JTextField textGender;
+	private JTextField textCitizenship;
+	private JTextField textNpm;;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					RegisterGUI frame = new RegisterGUI();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	 /**
+	 * Create the frame.
+	 */
+public RegisterGUI() {
+	setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 426);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblUsername = new JLabel("Username");
+		lblUsername.setFont(new Font("Bell MT", Font.BOLD, 14));
+		lblUsername.setBounds(10, 101, 92, 24);
+		contentPane.add(lblUsername);
+
+		JTextField textUsername = new JTextField();
+		textUsername.setBounds(112, 100, 272, 26);
+		contentPane.add(textUsername);
+		textUsername.setColumns(10);
+
+		JLabel lblPassword = new JLabel("Password");
+		lblPassword.setFont(new Font("Bell MT", Font.BOLD, 14));
+		lblPassword.setBounds(10, 145, 92, 24);
+		contentPane.add(lblPassword);
+
+		JPasswordField textPassword = new JPasswordField();
+		textPassword.setBounds(112, 144, 272, 26);
+		contentPane.add(textPassword);
+		textPassword.setColumns(10);
+		   
+		JButton btnRegister = new JButton("Register");
+		btnRegister.setFont(new Font("Bell MT", Font.BOLD, 12));
+		btnRegister.setBounds(112, 195, 272, 36);
+		btnRegister.addActionListener(new ActionListener() {
+			 @Override
+			public void actionPerformed(ActionEvent e) {
+				JFrame registerFrame = new JFrame("Register");
+                registerFrame.setSize(300, 300);
+                JPanel registerPanel = new JPanel();
+                registerPanel.setLayout(null);
+                registerFrame.getContentPane().add(registerPanel);
+                
+				JLabel lblFullName = new JLabel("FullName");
+				lblFullName.setFont(new Font("Bell MT", Font.BOLD, 14));
+				lblFullName.setBounds(10, 71, 92, 24);
+				registerPanel.add(lblFullName);
+		
+				JLabel lblEmail = new JLabel("Email");
+				lblEmail.setFont(new Font("Bell MT", Font.BOLD, 14));
+				lblEmail.setBounds(10, 145, 92, 24);
+				registerPanel.add(lblEmail);
+		
+				textFullName = new JTextField();
+				textFullName.setBounds(112, 70, 272, 26);
+				registerPanel.add(textFullName);
+				textFullName.setColumns(10);
+		
+				textEmail = new JTextField();
+				textEmail.setBounds(112, 144, 272, 26);
+				registerPanel.add(textEmail);
+				textEmail.setColumns(10);
+				
+				JLabel lblNewLabel_2 = new JLabel("REGISTER FORM");
+				lblNewLabel_2.setHorizontalAlignment(SwingConstants.CENTER);
+				lblNewLabel_2.setFont(new Font("Bell MT", Font.BOLD, 16));
+				lblNewLabel_2.setBounds(112, 11, 215, 20);
+				registerPanel.add(lblNewLabel_2);
+				
+				JButton btnNewButton = new JButton("SUBMIT");
+				btnNewButton.setFont(new Font("Bell MT", Font.BOLD, 12));
+				btnNewButton.setBounds(112, 303, 272, 36);
+				btnNewButton.addActionListener(new ActionListener() {
+					public void actionPerformed(ActionEvent e) {
+						ValidatorForm();	
+					}
+					});
+				registerPanel.add(btnNewButton);
+		
+				JLabel lblPhone = new JLabel("Phone");
+				lblPhone.setFont(new Font("Bell MT", Font.BOLD, 14));
+				lblPhone.setBounds(10, 182, 92, 24);
+				registerPanel.add(lblPhone);
+				textPhone = new JTextField();
+				textPhone.setBounds(112, 181, 272, 26);
+				registerPanel.add(textPhone);
+				textPhone.setColumns(10);
+		
+				JLabel lblGender = new JLabel("Gender");
+				lblGender.setFont(new Font("Bell MT", Font.BOLD, 14));
+				lblGender.setBounds(10, 219, 92, 24);
+				registerPanel.add(lblGender);
+		
+				JLabel lblCitizenship = new JLabel("Citizenship");
+				lblCitizenship.setFont(new Font("Bell MT", Font.BOLD, 14));
+				lblCitizenship.setBounds(10, 256, 92, 24);
+				registerPanel.add(lblCitizenship);
+		
+				textGender = new JTextField();
+				textGender.setColumns(10);
+				textGender.setBounds(112, 218, 272, 26);
+				registerPanel.add(textGender);
+		
+				textCitizenship = new JTextField();
+				textCitizenship.setColumns(10);
+				textCitizenship.setBounds(112, 255, 272, 26);
+				registerPanel.add(textCitizenship);
+		
+				JLabel lblNpm = new JLabel("Npm");
+				lblNpm.setFont(new Font("Bell MT", Font.BOLD, 14));
+				lblNpm.setBounds(10, 108, 92, 24);
+				registerPanel.add(lblNpm);
+		
+				textNpm = new JTextField();
+				textNpm.setColumns(10);
+				textNpm.setBounds(112, 107, 272, 26);
+				registerPanel.add(textNpm);
+				}
+			});
+		contentPane.add(btnRegister);
+		}
+		       
+private void ValidatorForm() {
+	if (textFullName.getText().isEmpty()||textNpm.getText().isEmpty() || textEmail.getText().isEmpty() || textPhone.getText().isEmpty()|| textGender.getText().isEmpty() || textCitizenship.getText().isEmpty()) {
+		Object message = "Please fill up the form correctly";
+		JOptionPane.showMessageDialog(null, message);
+		} else {
+			try {
+				Insert2database();
+				JOptionPane.showMessageDialog(null, "Successfully saved");
+				String message = "Form data:\nFullName: " + textFullName.getText() + "\nNpm: " +textNpm.getText() + "\nEmail: " + textEmail.getText() + "\nPhone: " + textPhone.getText() + "\nGender: " + textGender.getText() + "\nCitizenship: " + textCitizenship.getText();
+				JOptionPane.showConfirmDialog(null, message, "Form Submitted", JOptionPane.OK_OPTION);
+				} catch (Exception e) {
+					JOptionPane.showMessageDialog(null, "Failed save. Error: " + e.getMessage());
+					e.printStackTrace();
+					}
+			}
+	}
+
+	
+private void Insert2database() throws Exception {
+	Students students = new Students();
+	students.setFullname(textFullName.getText());
+	students.setNpm(textNpm.getText());
+	students.setEmail(textEmail.getText());		
+	students.setPhone(textPhone.getText());
+	students.setGender(textGender.getText());
+	students.setCitizenship(textCitizenship.getText());
+	
+	StudentsDao stdDao = new StudentsDao();
+	stdDao.saved(students);
+	}
+private class SwingAction extends AbstractAction {
+	public SwingAction() {
+		putValue(NAME, "SUBMIT");
+		putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+	}
+}
