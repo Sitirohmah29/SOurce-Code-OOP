@@ -23,39 +23,39 @@ public class FlowLayoutSample extends JFrame {
 		setSize(500,500);
 		setTitle("Contoh No Layout");
 		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		GenerateUI(this);
+		GenerateUIBorder(this);
 	}
 	
 	public static void main(String[] args) {
 		new FlowLayoutSample();
 	}
 	
-	private void GenerateUI(FlowLayoutSample frame) {
-		JButton button1 = new JButton("Button 1");
-		JButton button2 = new JButton("Button 2");
-		JButton button3 = new JButton("Button 3");
-		JButton button4 = new JButton("Button 4");
-		
-		frame.add(button1);
-		frame.add(button2);
-		frame.add(button3);
-		frame.add(button4);
-		frame.setLayout(new FlowLayout());
-	}
-	
-//	private void GenerateUIBorder(FlowLayoutSample frame) {
+//	private void GenerateUI(FlowLayoutSample frame) {
 //		JButton button1 = new JButton("Button 1");
 //		JButton button2 = new JButton("Button 2");
 //		JButton button3 = new JButton("Button 3");
 //		JButton button4 = new JButton("Button 4");
-//		JButton button5 = new JButton("Button 5");
 //		
-//		frame.add(button1, BorderLayout.NORTH);
-//		frame.add(button2, BorderLayout.SOUTH);
-//		frame.add(button3, BorderLayout.EAST);
-//		frame.add(button4, BorderLayout.WEST);
-//		frame.add(button5, BorderLayout.CENTER);
+//		frame.add(button1);
+//		frame.add(button2);
+//		frame.add(button3);
+//		frame.add(button4);
+//		frame.setLayout(new FlowLayout());
 //	}
+	
+	private void GenerateUIBorder(FlowLayoutSample frame) {
+		JButton button1 = new JButton("Button 1");
+		JButton button2 = new JButton("Button 2");
+		JButton button3 = new JButton("Button 3");
+		JButton button4 = new JButton("Button 4");
+		JButton button5 = new JButton("Button 5");
+		
+		frame.add(button1, BorderLayout.NORTH);
+		frame.add(button2, BorderLayout.SOUTH);
+		frame.add(button3, BorderLayout.EAST);
+		frame.add(button4, BorderLayout.WEST);
+		frame.add(button5, BorderLayout.CENTER);
+	}
 	
 //	private void GenerateUIGrid(FlowLayoutSample frame) {
 //		JButton button1 = new JButton("Button 1");
